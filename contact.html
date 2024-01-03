@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us</title>
+        <link rel="icon" href="images/ssgr.png" type="image/jpg">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="sub-header sub-header-image-4">
+            <nav>
+                <a href="index.html"><img src="images/ssgr.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="course.html">COURSES</a></li>
+                        <li><a href="our faculty.html">OUR FACULTY</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1>Contact Us</h1>
+        </section>
+
+<!-- --------Contact us content-------- -->
+
+<section class="location">
+    <h1>Our Location</h1>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2470.53008350542!2d82.9899458596576!3d25.631796962563588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991d3d5a9b4d23f%3A0xc87f6d0886a1eeac!2sS.G.R.%20Inter%20College%20Dobhi%20Jaunpur!5e0!3m2!1sen!2sin!4v1693036078737!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col">
+            <h1>Our Contact Details</h1>
+            <div>
+                <a class="plain-link" href="https://goo.gl/maps/hnvb9MRapZumfxN3A"><i class="fa fa-home"></i></a>
+                <a class="plain-link" href="https://goo.gl/maps/hnvb9MRapZumfxN3A">
+                <span>
+                    <h5>Shri Ganesh Rai Inter College</h5>
+                    <p>Karra-College, Dobhi-Jaunpur, Uttar Pradesh (India)</p>
+                </span>
+                </a>
+            </div>
+            <div>
+                <a class="plain-link" href="tel:917122580011"><i class="fa fa-phone"></i></a>
+                <a class="plain-link" href="tel:917122580011">
+                <span>
+                    <h5>(+91)1234567890</h5>
+                    <p>Monday to Saturday, 10 am to 6 pm</p>
+                </span>
+                </a>
+            </div>
+            <div>
+                <a class="plain-link" href="mailto:XYZ@sgric.edu"><i class="fa fa-envelope-o"></i></a>
+                <span>
+                    <a class="plain-link" href="mailto:XYZ@sgric.edu">
+                    <h5>XYZ@sgric.edu</h5>
+                    <p>Email us for admission related queries.</p>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="contact-col">
+            <h1>Post your Query</h1>
+            <form action="https://formspree.io/f/xrgrdkry" id="contact-form" method="POST">
+                <input type="text" name="Name" id="Name" placeholder="Enter your Name" required>
+                <input type="email" name="Email" id="Email" placeholder="Enter your Email" required>
+                <input type="text" name="Subject" id="Subject" placeholder="Enter your Subject" required>
+                <textarea rows="8" name="Message" id="Message" placeholder="Message" required></textarea>
+                <button type="submit" class="hero-btn red-btn submit-btn">Send Message</button>
+            </form>
+            <div id="status"></div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ------- Footer -------  -->
+<section class="footer">
+    <h4>About us</h4>
+    <p>
+SGR INTER COLLEGE is a government college who is attached with his post graduate college SGRPG.
+    </p>
+    <div class="icons">
+        <a class="plain-link" href="https://twitter.com/XYZ"><i class="fa fa-twitter"></i></a>
+        <a class="plain-link" href="https://www.facebook.com/XYZ/?skip_nax_wizard=true"><i class="fa fa-facebook"></i></a>
+        <a class="plain-link" href="https://www.instagram.com/XYZ"><i class="fa fa-instagram"></i></a>
+        <a class="plain-link" href="https://www.youtube.com/channel/XYZ"><i class="fa fa-youtube"></i></a>
+    </div>
+    <p>
+        Made by Priyanshu Vshwakarma
+    </p>
+</section>
+
+<!-- -------------JavaScript for form submission------------ -->
+<script src="main.js"></script>
+
+<!-- -------------JavaScript for toggle menu------------ -->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+
+    </body>
+</html>

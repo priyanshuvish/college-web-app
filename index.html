@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanshu</title>
+    <link rel="icon" href="images/ssgr.png" type="image/jpg">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: rgb(216, 216, 185)
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .row.about-us {
+            margin-top: 5%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+        }
+
+        .header {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4, 9, 10, 0.7), rgba(4, 9, 10, 0.7)),
+                url(images/sgr2.jpeg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            padding: 2% 3%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav img {
+            height: 120px;
+        }
+
+        .nav-links {
+            margin-top: -50px;
+            flex: 1;
+            text-align: right;
+        }
+
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }
+
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .nav-links ul li ::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.3s;
+        }
+
+        .nav-links ul li :hover::after {
+            width: 100%;
+        }
+
+        .text-box {
+            width: 90%;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .text-box h1 {
+            font-size: 62px;
+        }
+
+        .text-box p {
+            margin: 10px 0 40px;
+            font-size: 14px;
+            color: white;
+        }
+
+        .plain-link {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            padding: 12px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .hero-btn:hover {
+            border: 1px solid #f44336;
+            background: #f44336;
+            transition: 0.5s;
+        }
+
+        nav .fa {
+            display: none;
+        }
+
+        .header h3 {
+            color: white;
+            position: absolute;
+            transform: translate(-50%);
+            margin-top: 80px;
+            left: 50%;
+            font-weight: 100;
+            font-size: 16px;
+        }
+
+        .arrows {
+            width: 60px;
+            height: 72px;
+            position: absolute;
+            left: 50%;
+            margin-left: -10px;
+            bottom: 0px;
+            z-index: 3;
+        }
+
+        .arrows path {
+            stroke: white;
+            fill: transparent;
+            stroke-width: 1px;
+            animation: arrow 2s infinite;
+            -webkit-animation: arrow 2s infinite;
+        }
+
+        @keyframes arrow {
+            0% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes arrow {
+            0% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .arrows path.a1 {
+            animation-delay: -1s;
+            -webkit-animation-delay: -1s;
+        }
+
+        .arrows path.a2 {
+            animation-delay: -0.5s;
+            -webkit-animation-delay: -0.5s;
+        }
+
+        .arrows path.a3 {
+            animation-delay: 0s;
+            -webkit-animation-delay: 0s;
+        }
+
+        .row11 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+        }
+
+        @media (max-width: 700px) {
+            nav img {
+                height: 70px;
+                padding: 20px;
+            }
+
+            .text-box h1 {
+                font-size: 20px;
+            }
+
+            .nav-links ul li {
+                display: block;
+            }
+
+            .nav-links {
+                margin-top: 0px;
+                position: fixed;
+                background: #f44336;
+                height: 100vh;
+                width: 200px;
+                top: 0;
+                right: -200px;
+                text-align: left;
+                z-index: 2;
+                transition: 0.5s;
+            }
+
+            nav .fa {
+                display: block;
+                color: #fff;
+                margin: 10px;
+                font-size: 22px;
+                cursor: pointer;
+                padding: 10px;
+            }
+
+            .nav-links ul {
+                padding: 30px;
+            }
+
+            .arrows {
+                /* width: 40px;
+    height: 28px; */
+                bottom: 50px;
+                opacity: 0.8;
+            }
+
+            .arrows path {
+                stroke: #aaa;
+            }
+
+            .header h3 {
+                display: none;
+            }
+
+            ::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        /* -------COURSE------- */
+
+        .course {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        p {
+            color: #777;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+        .row {
+            margin-top: 5%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+        }
+
+        .course-col {
+            flex-basis: 48%;
+            background: #fff3f3;
+            border-radius: 10px;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.2s;
+        }
+
+        .row11 .course-col p {
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .course-col:hover {
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 1000px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+
+        /* ------- campus ------- */
+
+        .campus {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .campus-col {
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .campus-col img {
+            width: 100%;
+            display: block;
+            height: 280px;
+        }
+
+        .layer {
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.2s;
+        }
+
+        .layer:hover {
+            background: rgba(226, 0, 0, 0.7);
+        }
+
+        .layer h3 {
+            width: 100%;
+            font-weight: 500;
+            color: white;
+            font-size: 26px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            opacity: 0;
+            transition: 0.2s;
+        }
+
+        .layer:hover h3 {
+            bottom: 40%;
+            opacity: 1;
+        }
+
+        /* --------facilities-------- */
+
+        .facilities {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .facilities-col {
+            text-align: left;
+        }
+
+        .facilities-col img {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        .facilities-col p {
+            padding: 0;
+            min-height: 105px;
+        }
+
+        .facilities-col h3 {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        /* --------- Testimonials ------- */
+
+        .testimonials {
+            width: 80%;
+            margin: auto;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        .testimonials-col {
+            margin: 0px 20px;
+            flex-basis: 44%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            text-align: left;
+            background: #fff3f3;
+            padding: 35px;
+            padding-left: 30px;
+            cursor: pointer;
+            display: flex;
+            transition: 0.5s;
+        }
+
+        .testimonials-col img {
+            margin-top: 0px;
+            height: 50px;
+            margin-left: 5px;
+            margin-right: 30px;
+            border-radius: 50%;
+        }
+
+        .testimonials-col:hover {
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonials-col p {
+            padding: 0;
+        }
+
+        .testimonials-col h3 {
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .testimonials-col .fa {
+            color: #fa7e75;
+        }
+
+        .row1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            .testimonials-col img {
+                margin-left: 0px;
+                margin-right: 15px;
+            }
+        }
+
+        /* ------- Call to action ------- */
+
+        .cta {
+            margin: 100px auto;
+            width: 80%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url(images/students.jpg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .cta h1 {
+            color: white;
+            margin-bottom: 40px;
+            padding: 0;
+        }
+
+        @media (max-width: 700) {
+            .cta h1 {
+                font-size: 24px;
+            }
+        }
+
+        /* --------footer-------- */
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .footer h4 {
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        .icons {
+            color: #f44336;
+            margin: 0 13px;
+            cursor: pointer;
+            /* padding: 18px 0; */
+            font-size: 24px;
+        }
+
+        p {
+            color: rgb(11, 10, 10);
+        }
+
+        .icons-blue {
+            color: #3f5177;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* ------------Sub header---------- */
+
+        .sub-header {
+            height: 50vh;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            color: white;
+        }
+
+        .sub-header-image-1 {
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+                url(images/banner.png);
+        }
+
+        .sub-header-image-2 {
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+                url(images/students.jpg);
+        }
+
+        .sub-header-image-3 {
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+                url(images/sgr10.jpg);
+        }
+
+        .sub-header-image-4 {
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+                url(images/sgr5.jpg);
+        }
+
+        .sub-header h1 {
+            margin-top: 100px;
+        }
+
+        .about-us {
+            width: 80%;
+            margin: auto;
+            padding-top: 80px;
+            padding-bottom: 50px;
+        }
+
+        .about-col {
+            flex-basis: 48%;
+            padding: 30px 2px;
+            transition: 0.2s;
+        }
+
+        .about-col img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-col h1 {
+            padding-top: 0;
+        }
+
+        .about-col p {
+            padding: 15px 0 25px;
+        }
+
+        .red-btn {
+            border: 1px solid #f44336;
+            background: transparent;
+            color: #f44336;
+        }
+
+        .red-btn:hover {
+            color: white;
+        }
+
+        /* ------- Our faculty -------   */
+
+        .blog-content {
+            width: 80%;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        .blog-left {
+            flex-basis: 100%;
+        }
+
+        .blog-left img {
+            width: 100%;
+        }
+
+        .blog-left h2 {
+            color: #222;
+            font-size: 40px;
+            font-weight: 600;
+            margin: 30px;
+        }
+
+        h2.heading1 {
+            color: #000;
+        }
+
+        @media (max-width: 700px) {
+            .blog-left h2 {
+                font-size: 20px;
+            }
+
+            .sub-header h1 {
+                font-size: 26px;
+            }
+        }
+
+        .comment-box {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 50px 0;
+            padding: 10px 20px;
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .comment-box h3 {
+            text-align: left;
+            padding: 20px;
+            padding-left: 0px;
+        }
+
+        .comment-form input,
+        .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 15px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            outline: none;
+            background: #f0f0f0;
+        }
+
+        .comment-form button {
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        /* --------Contact us-------- */
+
+        .location {
+            width: 80%;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        .location h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .map {
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .location iframe {
+            width: 100%;
+            margin-bottom: -10px;
+        }
+
+        .contact-us {
+            width: 80%;
+            margin: auto;
+        }
+
+        .contact-col {
+            flex-basis: 48%;
+            margin-bottom: 30px;
+        }
+
+        .contact-col div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-col div .fa {
+            font-size: 28px;
+            color: #f44336;
+            margin: 10px;
+            margin-right: 30px;
+        }
+
+        .contact-col div p {
+            padding: 0;
+        }
+
+        .contact-col div h5 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 400;
+        }
+
+        .contact-col h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contact-col form input,
+        .contact-col form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 17px;
+            outline: none;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .contact-col form textarea {
+            resize: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 700px) {
+            .contact-col div h5 {
+                font-size: 15px;
+            }
+        }
+
+        #status {
+            justify-content: center;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            padding: 10px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        #status.success {
+            background-color: rgb(142, 252, 98);
+            animation: status 4s ease forwards;
+        }
+
+        #status.failure {
+            background-color: rgb(245, 60, 60);
+            color: #fff;
+            animation: status 4s ease forwards;
+        }
+
+        @keyframes status {
+            0% {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            90% {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            100% {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+    </style>
+</head>
+
+
+<!-- html start -->
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/ssgr.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSES</a></li>
+                    <li><a href="our faculty.html">OUR FACULTY</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Shri Ganesh Rai Inter College</h1>
+            <p>
+                SGR INTER COLLEGE is one of the best government college in Karra-College, Dobhi-Jaunpur<br> certified
+                Institution.
+            </p>
+            <a href="contact.html" class="hero-btn">Visit us to know more.</a>
+            <h3>Scroll for more info</h3>
+        </div>
+        <svg class="arrows">
+            <path stroke-linecap="round" class="a1" d="M0 0 L15 15 L30 0"></path>
+            <path stroke-linecap="round" class="a2" d="M0 10 L15 25 L30 10"></path>
+            <path stroke-linecap="round" class="a3" d="M0 20 L15 35 L30 20"></path>
+        </svg>
+    </section>
+
+    <!-- ------- COURSE ------- -->
+
+    <section class="course">
+        <h1>Courses we offer</h1>
+        <p>All subjects of intermediate level are available</p>
+
+        <div class="row11">
+            <div class="course-col">
+                <h3>Science</h3>
+                <p>“The aim of science is to seek the simplest explanations of complex facts. We are apt to fall into
+                    the error of thinking that the facts are simple because simplicity is the goal of our quest. The
+                    guiding motto in the life of every natural philosopher should be, Seek simplicity and distrust it.
+                </p>
+                <a href="course.html" class="hero-btn red-btn">EXPLORE</a>
+            </div>
+            <div class="course-col">
+                <h3>Math</h3>
+                <p>Mathematics is the science and study of quality, structure, space, and change. Mathematicians seek
+                    out patterns, formulate new conjectures, and establish truth by rigorous deduction from
+                    appropriately chosen axioms and definitions.</p>
+                <a href="http://www.google.com" class="hero-btn red-btn">EXPLORE</a>
+            </div>
+
+            <div class="course-col">
+                <h3>History & Geography</h3>
+                <p>Historical geography is the branch of geography that studies the ways in which geographic phenomena
+                    have changed over time. It is a synthesizing discipline which shares both topical and methodological
+                    similarities with history, anthropology, ecology, geology, environmental studies, literary studies,
+                    and other fields..</p>
+                <a href="http://www.google.com" class="hero-btn red-btn">EXPLORE</a>
+            </div>
+            <div class="course-col">
+                <h3>Computer Science</h3>
+                <p>Computer Science is the study of computers and computational systems. Unlike electrical and computer
+                    engineers, computer scientists deal mostly with software and software systems; this includes their
+                    theory, design, development, and application.</p>
+                <a href="http://www.google.com" class="hero-btn red-btn">EXPLORE</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ------- CAMPUS ------- -->
+
+    <section class="campus">
+        <h1>Our Campus</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="images/sgr3.jpeg">
+                <div class="layer">
+                    <h3>Department</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/park.jpg">
+                <div class="layer">
+                    <h3>Parking</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="images/sgr5.jpg">
+                <div class="layer">
+                    <h3>Garden</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- -------FACILITIES------- -->
+
+    <section class="facilities">
+        <h1>Our facilities</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="row">
+            <div class="facilities-col">
+                <img src="images/sgr4.jpg" alt="">
+                <h3>Library</h3>
+                <p>Welcome to the Library of Shri Ganesh Rai Inter College. It was established in
+                    the year 1939. It is regarded as the best Library.</p>
+                <br>
+                <a class="hero-btn red-btn" href="http://www.google.com">EXPLORE</a>
+            </div>
+            <div class="facilities-col">
+                <img src="images/background.png" alt="">
+                <h3>Well Equipped Labs</h3>
+                <p>Well Equipped Labs. Labs are equipped with world class equipments and facilities based on the latest
+                    technology pertaining to different sectors.</p>
+                <br>
+                <a class="hero-btn red-btn" href="http://www.google.com">EXPLORE</a>
+            </div>
+            <div class="facilities-col">
+                <img src="images/sgr8.jpeg" alt="">
+                <h3>Computer Lab</h3>
+                <p>The Lab is committed to develop a novel framework for sustainable business ecosystem to promote
+                    innovation and nurture entrepreneurship. The Lab has established
+                    “SGR INTER COLLEGE” .</p>
+                <br>
+                <a class="hero-btn red-btn" href="http://www.google.com">EXPLORE</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- -------Testimonials------- -->
+
+    <section class="testimonials">
+        <h1>What our students say</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="row1">
+            <div class="testimonials-col">
+                <img src="images/sgr6.jpg" alt="">
+                <div>
+                    <p>
+                        Yes, My college has necessary infrastructure and facilities. We have many fans, lights,
+                        blackboard, smart board in the classroom. We have all courses text book as well as other books
+                        in our library. Our college is always clean the food in canteen is hygienic too.
+                    </p>
+                    <h3>Sandeep Yadav</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+            </div>
+            <div class="testimonials-col">
+                <img src="images/sgr7.jpg" alt="">
+                <div>
+                    <p>
+                        Yes it is an amazing life in that campus but i could only enjoy 1 year as later pandemic
+                        happened. There 3 basketball grounds, one football ground. badminton area, chess room, 3
+                        canteen, library and much more. Yes the area is totally safe and it is 5-7 min walking from the
+                        station. Yes college can handle the emergenices
+                    </p>
+                    <h3>Priyanshu Vishwakarma</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------Call to Action -------  -->
+
+    <section class="cta">
+        <h1>Enroll for our courses <br>And enquire about Admissions</h1>
+        <a href="contact.html" class="hero-btn">CONTACT US</a>
+    </section>
+
+
+    <!-- ------- Footer -------  -->
+
+    <section class="footer">
+        <h1>About us</h1>
+        <p>
+            SGR INTER COLLEGE is a government college who is attached with his post graduate college SGRPG.
+        </p>
+        <div class="icons">
+            <a class="plain-link" href="https://twitter.com/XYZ"><i class="fa fa-twitter"></i></a>
+            <a class="plain-link" href="https://www.facebook.com/XYZ/?skip_nax_wizard=true"><i
+                    class="fa fa-facebook"></i></a>
+            <a class="plain-link" href="https://www.instagram.com/XYZ"><i class="fa fa-instagram"></i></a>
+            <a class="plain-link" href="https://www.youtube.com/channel/XYZ"><i class="fa fa-youtube"></i></a>
+        </div>
+        <p>
+            Made by Priyanshu Vshwakarma
+        </p>
+    </section>
+
+    <!-- -------------JavaScript for toggle menu------------ -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>

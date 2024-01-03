@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Courses</title>
+        <link rel="icon" href="images/ssgr.png" type="image/jpg">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="sub-header sub-header-image-2">
+            <nav>
+                <a href="index.html"><img src="images/ssgr.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="course.html">COURSES</a></li>
+                        <li><a href="our faculty.html">OUR FACULTY</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1>Our Courses</h1>
+        </section>
+
+<!-- --------Courses-------- -->
+
+<section class="course">
+    <h1>Courses we offer</h1>
+    <p>All subjects of intermediate level are available</p>
+
+    <div class="row">
+        <div class="course-col">
+            <h3>Science</h3>
+            <p>“The aim of science is to seek the simplest explanations of complex facts. We are apt to fall into the error of thinking that the facts are simple because simplicity is the goal of our quest. The guiding motto in the life of every natural philosopher should be, Seek simplicity and distrust it.</p>
+            <a href="course.html" class="hero-btn red-btn">EXPLORE</a>
+        </div>
+        <div class="course-col">
+            <h3>Math</h3>
+            <p>Mathematics is the science and study of quality, structure, space, and change. Mathematicians seek out patterns, formulate new conjectures, and establish truth by rigorous deduction from appropriately chosen axioms and definitions.</p>
+            <a href="http://www.google.com" class="hero-btn red-btn">EXPLORE</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="course-col">
+            <h3>History & Geography</h3>
+            <p>Historical geography is the branch of geography that studies the ways in which geographic phenomena have changed over time. It is a synthesizing discipline which shares both topical and methodological similarities with history, anthropology, ecology, geology, environmental studies, literary studies, and other fields..</p>
+            <a href="http://www.google.com" class="hero-btn red-btn">EXPLORE</a>
+        </div>        
+        <div class="course-col">
+            <h3>Computer Science</h3>
+            <p>Computer Science is the study of computers and computational systems. Unlike electrical and computer engineers, computer scientists deal mostly with software and software systems; this includes their theory, design, development, and application.</p>
+            <a href="http://www.google.com" class="hero-btn red-btn">EXPLORE</a>
+        </div>
+    </div>
+</section>
+
+<!-- -------FACILITIES------- -->
+
+<secton class="facilities">
+    <h1>Our facilities</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="row-container">
+        <div class="facilities-col">
+            <img src="images/sgr4.jpg" alt="">
+            <h3>Library</h3>
+            <p>Welcome to the Library of Shri Ganesh Rai Inter College. It was established in 
+                the year 1939. It is regarded as the best Library.</p>
+                <br>
+                <a class="hero-btn red-btn" href="http://www.google.com">EXPLORE</a>
+        </div>
+        <div class="facilities-col">
+            <img src="images/background.png" alt="">
+            <h3>Well Equipped Labs</h3>
+            <p>Well Equipped Labs. Labs are equipped with world class equipments and facilities based on the latest technology pertaining to different sectors.</p>
+            <br>
+            <a class="hero-btn red-btn" href="http://www.google.com">EXPLORE</a>
+        </div>
+        <div class="facilities-col">            
+            <img src="images/sgr8.jpeg" alt="">        
+            <h3>Computer Lab</h3>
+            <p>The Lab is committed to develop a novel framework for sustainable business ecosystem to promote innovation and nurture entrepreneurship. The Lab has established 
+                “SGR INTER COLLEGE” .</p>
+                <br>
+                <a class="hero-btn red-btn" href="http://www.google.com">EXPLORE</a>
+            </div>
+    </div>
+</section>
+
+
+<!-- ------- Footer -------  -->
+
+<section class="footer">
+    <h4>About us</h4>
+    <p>
+SGR INTER COLLEGE is a government college who is attached with his post graduate college SGRPG.
+    </p>
+    <div class="icons">
+        <a class="plain-link" href="https://twitter.com/XYZ"><i class="fa fa-twitter"></i></a>
+        <a class="plain-link" href="https://www.facebook.com/XYZ/?skip_nax_wizard=true"><i class="fa fa-facebook"></i></a>
+        <a class="plain-link" href="https://www.instagram.com/XYZ"><i class="fa fa-instagram"></i></a>
+        <a class="plain-link" href="https://www.youtube.com/channel/XYZ"><i class="fa fa-youtube"></i></a>
+    </div>
+    <p>
+        Made by Priyanshu Vshwakarma
+    </p>
+</section>
+
+<!-- -------------JavaScript for toggle menu------------ -->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+
+    </body>
+</html>
